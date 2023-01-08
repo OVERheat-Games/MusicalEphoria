@@ -699,6 +699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coinsMultiplier: 1
   _coinsText: {fileID: 789234016}
+  _clickFX: {fileID: 1756699448687093902, guid: 021eea617fd5387468bdbb6040e71dd6, type: 3}
+  _buttonPosition: {fileID: 954409106}
 --- !u!4 &862888059
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,7 +1317,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 963194227}
-  m_PlaneDistance: 5
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
