@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17338738, g: 0.21673954, b: 0.29880902, a: 1}
+  m_IndirectSpecularColor: {r: 0.17338741, g: 0.21673957, b: 0.29880905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -753,7 +753,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1080}
+  m_SizeDelta: {x: 0, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954409107
 MonoBehaviour:
@@ -1237,6 +1237,7 @@ GameObject:
   - component: {fileID: 1487560194}
   - component: {fileID: 1487560193}
   - component: {fileID: 1487560192}
+  - component: {fileID: 1487560195}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1258,6 +1259,7 @@ RectTransform:
   m_Children:
   - {fileID: 789234018}
   - {fileID: 954409106}
+  - {fileID: 1992385160}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1295,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -1327,6 +1329,14 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!222 &1487560195
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487560190}
+  m_CullTransparentMesh: 1
 --- !u!1 &1788535421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1434,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1992385159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992385160}
+  - component: {fileID: 1992385162}
+  - component: {fileID: 1992385161}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1992385160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992385159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1487560191}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1992385161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992385159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3ab05f2bffa44d146ac2f05224246fee, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1992385162
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992385159}
+  m_CullTransparentMesh: 1
 --- !u!1 &2061413386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6426637961678933312}
   m_LocalRotation: {x: -0.00000004371139, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -82.91383, z: -578}
+  m_LocalPosition: {x: -113, y: 95.6, z: -648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2406,14 +2492,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138086855455840620}
-  m_LocalRotation: {x: -0.00000004371139, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: -60.1223, z: -88}
+  m_LocalRotation: {x: 0.000000029802319, y: -0, z: 0.70710665, w: 0.707107}
+  m_LocalPosition: {x: -104, y: -467, z: -344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2727148615991715320}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &6426637961678933312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,10 +2539,12 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd6021c8ad9476442afa3e473ccdaec2, type: 2}
-  - {fileID: -2267504400697033301, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
-  - {fileID: 5924371341958811637, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
+  - {fileID: 2100000, guid: 337d521fb0a4ac14daec1feea11a9f56, type: 2}
+  - {fileID: -8809518456156902908, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
+  - {fileID: -8809518456156902908, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
+  - {fileID: 8253539443350399036, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
   - {fileID: -2450658907613148436, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
+  - {fileID: -8809518456156902908, guid: 8cd91fcf8abe5934eaeb7e75172740d7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2509,7 +2597,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
