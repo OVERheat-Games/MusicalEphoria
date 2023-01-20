@@ -4,31 +4,35 @@ using UnityEngine;
 
 public class Spawn_menu : MonoBehaviour
 {
- public GameObject Menus;
- public Animation CameraFOV; 
- bool MenuON = false;
- public GameObject prefab;
+  public GameObject Menu;
+  public Animation CameraFOV; 
+  bool MenuON = false;
 
  private void Update() 
  {
-   if (Input.GetKey(KeyCode.Mouse0) && MenuON == false) 
-   {
-      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-      RaycastHit _hit;
-      if (Physics.Raycast(ray))
-      {
-        Menus.SetActive(true);
-        MenuON = true;
-        if(Menus == true)
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    RaycastHit _hit;
+    if(Physics.Raycast(ray, out _hit, Mathf.Infinity))
+    {
+      if(Input.GetMouseButtonDown(0))
+      { 
+        if(MenuON == false)
         {
+          Menu.SetActive(true);
+          MenuON = true;
           CameraFOV = GetComponent<Animation>();
-          CameraFOV.Play("CameraFoV");
+          CameraFOV.Play("CameraFoV+"); 
         }
-        if(Physics.Raycast(ray, out _hit, Mathf.Infinity))
+        else
         {
-
+          Menu.SetActive(false);
+          MenuON = false;
+          CameraFOV = GetComponent<Animation>();
+          CameraFOV.Play("CameraFoV-");
         }
-      }
-   } 
-  }
+                    
+      } 
+    }
+  } 
+  
 }
