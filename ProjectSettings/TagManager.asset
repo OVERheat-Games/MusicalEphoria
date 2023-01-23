@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - Open_Menu
+  - Open_Step
   layers:
   - Default
   - TransparentFX

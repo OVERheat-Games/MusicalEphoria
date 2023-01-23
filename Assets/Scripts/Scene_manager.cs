@@ -7,7 +7,6 @@ public class Scene_manager : MonoBehaviour
 {
     public void StartGame(int _SceneNumber)
     {
-        SceneManager.LoadScene(_SceneNumber);
-    }
-    
+        SceneManager.LoadScene(_SceneNumber);      
+    }      
 }
