@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shootable
   - Open_Menu
+  - exitMenu
+  - OpenCreateMenu
   - Open_Step
   layers:
   - Default
