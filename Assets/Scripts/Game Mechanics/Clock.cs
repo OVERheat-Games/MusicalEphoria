@@ -19,7 +19,7 @@ public class Clock : MonoBehaviour
             gameTime[0].text = day.ToString("F0");
         }
     
-        if(day >= 21 && startTime == true)
+        if(day >= 30 && startTime == true)
         {
             month ++;
             month += Time.deltaTime;

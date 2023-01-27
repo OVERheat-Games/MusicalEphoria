@@ -9,6 +9,9 @@ TagManager:
   - exitMenu
   - OpenCreateMenu
   - Open_Step
+  - Personal_Menu
+  - Genre
+  - CreateSongMenu
   layers:
   - Default
   - TransparentFX
