@@ -5,9 +5,9 @@ using UnityEngine;
 public class Spawn_menu : MonoBehaviour
 {
   
-  public GameObject HUD;
+  public GameObject _HUD;
   public GameObject Menu;
-  public GameObject[] changeMenu;
+  public GameObject[] _tapMenu;
 
   public Animation CameraFOV;
 
@@ -16,7 +16,7 @@ public class Spawn_menu : MonoBehaviour
 
   private void Awake() 
   {
-    
+ 
   }
   void Update() 
  {
@@ -30,22 +30,22 @@ public class Spawn_menu : MonoBehaviour
         if(MenuON == false)
         {
           Clock.startTime = false;
-          HUD.SetActive(false);
-          changeMenu[0].SetActive(true);
+          _HUD.SetActive(false);
+          _tapMenu[0].SetActive(true);
           MenuON = true;
 
           CameraFOV = GetComponent<Animation>();
           CameraFOV.Play("CameraFoV+");
 
           Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-          changeMenu[0].transform.position = mousePosition;
+          _tapMenu[0].transform.position = mousePosition;
         }
         else
         {
-          changeMenu[1].SetActive(false);
+          _tapMenu[1].SetActive(false);
           Clock.startTime = true;
-          HUD.SetActive(true);
-          changeMenu[0].SetActive(false);
+          _HUD.SetActive(true);
+          _tapMenu[0].SetActive(false);
           MenuON = false;
 
           CameraFOV = GetComponent<Animation>();
@@ -55,7 +55,7 @@ public class Spawn_menu : MonoBehaviour
           if(Input.GetMouseButtonDown(0) && _hit.transform.tag == "OpenCreateMenu")
           {
             createSongMenu = true;
-            changeMenu[0].SetActive(false);
+            _tapMenu[0].SetActive(false);
             MenuON = true;
             Menu.SetActive(true);
           }
@@ -64,7 +64,7 @@ public class Spawn_menu : MonoBehaviour
             Clock.startTime = true;
             MenuON = false;
             Menu.SetActive(false);
-            HUD.SetActive(true);
+            _HUD.SetActive(true);
             createSongMenu = false;
             CameraFOV = GetComponent<Animation>();
             CameraFOV.Play("CameraFoV-");
@@ -74,8 +74,8 @@ public class Spawn_menu : MonoBehaviour
         if(MenuON == false)
         {
           Clock.startTime = false;
-          HUD.SetActive(false);
-          changeMenu[1].SetActive(true);
+          _HUD.SetActive(false);
+          _tapMenu[1].SetActive(true);
           MenuON = true;
 
           CameraFOV = GetComponent<Animation>();
@@ -84,10 +84,10 @@ public class Spawn_menu : MonoBehaviour
         else 
         {
           Clock.startTime = true;
-          HUD.SetActive(true);
-          changeMenu[1].SetActive(false);
+          _HUD.SetActive(true);
+          _tapMenu[1].SetActive(false);
           MenuON = false;
-          changeMenu[0].SetActive(false);
+          _tapMenu[0].SetActive(false);
 
           CameraFOV = GetComponent<Animation>();
           CameraFOV.Play("CameraFoV-");

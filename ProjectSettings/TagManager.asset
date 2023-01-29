@@ -12,6 +12,7 @@ TagManager:
   - Personal_Menu
   - Genre
   - CreateSongMenu
+  - SelectionMenu
   layers:
   - Default
   - TransparentFX
