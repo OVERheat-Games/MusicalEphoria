@@ -4,15 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Shootable
-  - Open_Menu
-  - exitMenu
-  - OpenCreateMenu
-  - Open_Step
-  - Personal_Menu
-  - Genre
-  - CreateSongMenu
-  - SelectionMenu
+  - HUD
+  - OpenSelectionMenu
+  - OpenCharacterMenu
   layers:
   - Default
   - TransparentFX
