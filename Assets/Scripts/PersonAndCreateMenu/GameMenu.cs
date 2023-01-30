@@ -18,9 +18,11 @@ public class GameMenu : MonoBehaviour
 
     public void openSelectionMenu()
     {  
-        Clock.startTime = false;
+        gameMenu = true;
         _selectionMenu.SetActive(true);
+
         _hud.SetActive(false);
+        Clock.startTime = false;
 
         CameraFOV = GetComponent<Animation>();
         CameraFOV.Play("CameraFoV+");
@@ -31,20 +33,23 @@ public class GameMenu : MonoBehaviour
 
     public void closedSelectionMenu()
     {   
-        Clock.startTime = true;
-        selectionMenuOpen = false;
-        _selectionMenu.SetActive(false);
         _hud.SetActive(true);
+        Clock.startTime = true;
 
+        _characterMenu.SetActive(false);
+        gameMenu = false;
+        _selectionMenu.SetActive(false);
+        
         CameraFOV = GetComponent<Animation>();
         CameraFOV.Play("CameraFoV-");
     }   
 
     public void openCharacterMenu()
-    {
-        Clock.startTime = false;
-        characterMenuOpen = true;
+    {   
         _characterMenu.SetActive(true);
+        gameMenu = true;
+
+        Clock.startTime = false;
         _hud.SetActive(false);
 
         CameraFOV = GetComponent<Animation>();
@@ -56,10 +61,12 @@ public class GameMenu : MonoBehaviour
 
     public void closedCharacterMenu()
     {
-        Clock.startTime = true;
-        characterMenuOpen = false;
-        _characterMenu.SetActive(false);
         _hud.SetActive(true);
+        Clock.startTime = true;
+
+        _selectionMenu.SetActive(false);
+        _characterMenu.SetActive(false);
+        gameMenu = false;
 
         CameraFOV = GetComponent<Animation>();
         CameraFOV.Play("CameraFoV-");
@@ -76,10 +83,9 @@ public class GameMenu : MonoBehaviour
 
         if(Physics.Raycast(ray, out _hit, Mathf.Infinity))
         {
-            if(Input.GetMouseButtonDown(0) && _hit.transform.tag == "OpenSelectionMenu")
+            if(Input.GetMouseButtonDown(0) && _hit.transform.tag == "OpenSelectionMenu" && selectionMenuOpen == false)
             {
-                gameMenu = true;
-                if(gameMenu)
+                if(gameMenu == false)
                 {
                     openSelectionMenu();
                 }
@@ -87,9 +93,8 @@ public class GameMenu : MonoBehaviour
                 {
                     closedSelectionMenu();
                 } 
-            }  
-
-            if(Input.GetMouseButtonDown(0) && _hit.transform.tag == "OpenCharacterMenu")
+            }
+            if(Input.GetMouseButtonDown(0) && _hit.transform.tag == "OpenCharacterMenu" && characterMenuOpen == false)
             {
                 if(gameMenu == false)
                 {
@@ -99,7 +104,9 @@ public class GameMenu : MonoBehaviour
                 {
                     closedCharacterMenu();
                 } 
-            }  
+            } 
+            
+                 
         }      
     }    
 }
